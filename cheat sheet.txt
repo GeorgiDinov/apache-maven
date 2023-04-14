@@ -1,0 +1,13 @@
+create new file trough CL on windows
+type NUL > filename.txt/.java/.docx
+
+open the file in Notepad
+notepad filename.txt/.java/.docx
+
+javac HelloWorld.java -> produces the compiled class file - HelloWorld.class
+java HelloWorld -> runs the class file
+jar cf helloworld.jar HelloWorld.class -> creates the helloworld.jar file
+java -classpath helloworld.jar HelloWorld -> executes the class within the jar file
+
+javac -classpath ./lib/* HelloWorld.java -> will include all files in the lib folder and compile the class file
+java -classpath ./lib/*;./ HelloWorld -> executes the class file, inscludes the lib folder/path and the root path
