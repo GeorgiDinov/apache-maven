@@ -11,3 +11,9 @@ java -classpath helloworld.jar HelloWorld -> executes the class within the jar f
 
 javac -classpath ./lib/* HelloWorld.java -> will include all files in the lib folder and compile the class file
 java -classpath ./lib/*;./ HelloWorld -> executes the class file, inscludes the lib folder/path and the root path
+
+
+mvn wrapper:wrapper -> creates maven wrapper and the .mvn folder, mvnw and mvnw.cmd files, 
+                       bundled maven version which all users on different environments could use
+		       './mvnw clean install' or 'mvnw.cmd clean install'
+		       refer -> https://maven.apache.org/wrapper/
