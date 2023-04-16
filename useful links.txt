@@ -1,3 +1,5 @@
 https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html
 https://maven.apache.org/wrapper/
 https://maven.apache.org/archetypes/
+
+https://www.petrikainulainen.net/programming/maven/creating-code-coverage-reports-for-unit-and-integration-tests-with-the-jacoco-maven-plugin/
