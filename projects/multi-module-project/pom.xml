@@ -28,7 +28,46 @@
         <project.reporting.outputEncoding>${encoding.format}</project.reporting.outputEncoding>
         <maven.flatten.plugin.version>1.5.0</maven.flatten.plugin.version>
         <maven.enforcer.plugin.version>3.3.0</maven.enforcer.plugin.version>
+        <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
+        <hibernate.version>6.2.3.Final</hibernate.version>
+        <lombok.version>1.18.26</lombok.version>
+        <jaxb.version>2.3.0</jaxb.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${org.mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate.orm</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>${hibernate.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>${jaxb.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-core</artifactId>
+                <version>${jaxb.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-impl</artifactId>
+                <version>${jaxb.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>
