@@ -6,12 +6,60 @@
 
     <groupId>com.georgidinov</groupId>
     <artifactId>multi-module-project</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>${revision}</version>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>jpa-entities</module>
+        <module>web-api</module>
+        <module>web-app</module>
+        <module>converters</module>
+    </modules>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <revision>1.0-SNAPSHOT</revision>
+
+        <java.version>11</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <encoding.format>UTF-8</encoding.format>
+        <project.build.sourceEncoding>${encoding.format}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${encoding.format}</project.reporting.outputEncoding>
+        <maven.flatten.plugin.version>1.5.0</maven.flatten.plugin.version>
     </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <!-- https://www.mojohaus.org/flatten-maven-plugin/ -->
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
+                <version>${maven.flatten.plugin.version}</version>
+                <configuration>
+                    <!-- https://www.mojohaus.org/flatten-maven-plugin/flatten-mojo.html -->
+                    <flattenMode>bom</flattenMode>
+                </configuration>
+                <executions>
+                    <!-- enable flattening -->
+                    <execution>
+                        <id>flatten</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>flatten</goal>
+                        </goals>
+                    </execution>
+                    <!-- ensure proper cleanup -->
+                    <execution>
+                        <id>flatten.clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>clean</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

@@ -71,6 +71,7 @@ local.properties
 /target/
 /target/**
 **/target/
+.flatten-pom.xml
 
 ######################
 # Gradle
