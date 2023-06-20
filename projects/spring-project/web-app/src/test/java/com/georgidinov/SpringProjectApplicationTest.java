@@ -1,4 +1,16 @@
-import static org.junit.jupiter.api.Assertions.*;
+package com.georgidinov;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+
+@SpringBootTest
 class SpringProjectApplicationTest {
-  
+
+
+    @Test
+    void contextLoads() {
+
+    }
+
 }

@@ -1,4 +1,4 @@
-package com.georgidinov.springproject;
+package com.georgidinov;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

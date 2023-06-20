@@ -17,3 +17,5 @@ mvn wrapper:wrapper -> creates maven wrapper and the .mvn folder, mvnw and mvnw.
                        bundled maven version which all users on different environments could use
 		       './mvnw clean install' or 'mvnw.cmd clean install'
 		       refer -> https://maven.apache.org/wrapper/
+
+mvn dependency:tree -> shows the dependency tree for the libraries, jars, etc.

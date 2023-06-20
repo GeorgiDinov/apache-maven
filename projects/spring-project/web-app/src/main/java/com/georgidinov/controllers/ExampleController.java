@@ -1,4 +1,4 @@
-package com.georgidinov.springproject.controllers;
+package com.georgidinov.controllers;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
